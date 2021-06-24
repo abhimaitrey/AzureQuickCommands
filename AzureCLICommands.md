@@ -7,7 +7,5 @@ The resource group location can be different of provisioning resources. Some of 
 Example: Microsoft Azure Batch service
 
 ```
-az provider show --namespace Microsoft.Batch \
-                 --query "resourceTypes[?resourceType=='batchAccounts'].location" \
-                 --out Table
+az provider show   --namespace Microsoft.Batch   --query "resourceTypes[?resourceType=='batchAccounts'].locations | [0]"   --out table
 ```
