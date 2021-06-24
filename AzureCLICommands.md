@@ -7,7 +7,7 @@ The resource group location can be different of provisioning resources. Some of 
 Example: Microsoft Azure Batch service
 
 ```
-az provider show --namesapce Microsoft.Batch \
+az provider show --namespace Microsoft.Batch \
                  --query "resourceTypes[?resourceType=='batchAccounts'].location" \
                  --out Table
 ```
